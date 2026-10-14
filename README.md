@@ -4,10 +4,15 @@
 
 ## 订阅
 
+- **[默认通用配置（推荐）](https://raw.githubusercontent.com/arthurwangwsx-code/shadowrocket-rules/main/default.conf)**：中国大陆网站及常见视频平台走 TXY，海外直连。首次使用优先选择这个。
 - [小小优趣精准分流](https://raw.githubusercontent.com/arthurwangwsx-code/shadowrocket-rules/main/xiaoxiaoyouqu.conf)
 - [中国大陆通用分流](https://raw.githubusercontent.com/arthurwangwsx-code/shadowrocket-rules/main/back-cn.conf)
 
 在 Shadowrocket **底部「配置」** 中添加 URL（不要在首页的节点 Subscribe 中添加），选择配置后，首页选择 TXY 节点，将「全局路由」设为「配置」，开启连接。更新仓库后，在配置页面刷新下载。
+
+## 推荐维护策略
+
+`default.conf` 是长期使用的基础入口；已添加常见大陆视频域名、`.cn` 域名和 GEOIP 中国大陆规则，海外服务优先直连。以后将新应用的**经核验**域名添加到 `default.conf` 的 `FINAL` 之前，保持同一个订阅地址不变。`PROXY` 使用 Shadowrocket 首页当前选中的节点，不含节点凭据。中国 CDN、共享域名和应用 IP 直连行为可能需要额外验证。
 
 ## 规则范围与验证状态
 

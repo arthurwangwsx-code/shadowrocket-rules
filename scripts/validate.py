@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 
 root = Path(__file__).resolve().parents[1]
-for name in ('xiaoxiaoyouqu.conf', 'back-cn.conf'):
+for name in ('default.conf', 'xiaoxiaoyouqu.conf', 'back-cn.conf'):
     text = (root / name).read_text()
     assert '[General]' in text and '[Rule]' in text, name
     rules = [s.strip() for s in text.split('[Rule]', 1)[1].splitlines() if s.strip() and not s.strip().startswith('#')]
